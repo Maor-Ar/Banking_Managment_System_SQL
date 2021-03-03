@@ -26,10 +26,7 @@ def luhn_alg(num):
         if index % 2 == 0:
             sum += value
         else:
-            if value * 2 > 9:
-                sum += value * 2 - 9
-            else:
-                sum += value * 2
+            sum += value * 2 - 9 if value > 9 / 2 else value * 2
 
     return sum % 10 == 0
 
